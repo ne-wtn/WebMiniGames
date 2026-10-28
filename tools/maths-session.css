@@ -1,0 +1,9 @@
+.mg-maths-plan { background:var(--mg-surface);color:var(--mg-text);border:2px solid var(--mg-accent);border-radius:var(--mg-radius-sm);padding:14px;margin:12px 0;position:relative;z-index:2;min-width:0; }
+.mg-maths-plan h3 { margin:0 0 8px;font:700 1rem var(--mg-font); }
+.mg-maths-plan p { font-size:.85rem;line-height:1.5;margin:7px 0; }
+.mg-maths-field { display:grid;gap:5px;margin:10px 0;font-size:.85rem; }
+.mg-maths-field input,.mg-maths-field select { width:100%;min-width:0;min-height:44px;padding:8px;border:1px solid var(--mg-muted);border-radius:6px;background:var(--mg-surface-2);color:var(--mg-text);font:inherit; }
+.mg-maths-plan .mg-actions { display:flex;flex-wrap:wrap;gap:7px; }
+.mg-maths-plan .mg-btn { font-size:.8rem; }
+.mg-maths-feedback { color:var(--mg-bad);font-weight:700; }
+.mg-maths-hint { border-inline-start:3px solid var(--mg-accent);padding-inline-start:10px; }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Integer Maze — Escape the Number Vault</title>
+  <meta name="description" content="A maze and escape-room game about positive and negative integers, the number line and the order of operations.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🌀%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mg-app">
+    <header id="hud"></header>
+    <main class="mg-main vault">
+      <section class="maze-wrap" aria-label="Maze">
+        <canvas id="maze" role="img" aria-label="Maze map. Use arrow keys to move."></canvas>
+        <div class="alarm" id="alarm" hidden>⚠ CORE MELTDOWN — ESCAPE NOW!</div>
+      </section>
+
+      <aside class="panel" aria-label="Energy and mechanisms">
+        <section class="energy">
+          <h2>Energy state</h2>
+          <div class="energy__value" id="eValue" aria-live="polite">E = 0</div>
+          <canvas id="numline" aria-label="Number line from −20 to 20 showing your energy"></canvas>
+          <ol class="log" id="log" aria-label="Recent energy changes"></ol>
+        </section>
+        <section class="near">
+          <h2>Nearby mechanism</h2>
+          <div id="nearInfo" class="near__info">Move next to a gate, console, lift or exit.</div>
+          <button class="mg-btn mg-btn--primary wide" type="button" id="activateBtn">⚡ Activate Mechanism <kbd>Space</kbd></button>
+          <button class="mg-btn wide" type="button" id="rebootBtn">↺ Reboot to checkpoint (−30 pts) <kbd>R</kbd></button>
+        </section>
+        <section class="inv">
+          <h2>Inventory</h2>
+          <div id="inv"></div>
+        </section>
+      </aside>
+
+      <div class="dpad" id="dpad" aria-label="Movement buttons">
+        <button type="button" data-dir="up" aria-label="Move up">▲</button>
+        <button type="button" data-dir="left" aria-label="Move left">◀</button>
+        <button type="button" data-dir="act" aria-label="Activate mechanism">⚡</button>
+        <button type="button" data-dir="right" aria-label="Move right">▶</button>
+        <button type="button" data-dir="down" aria-label="Move down">▼</button>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

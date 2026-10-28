@@ -1,0 +1,7 @@
+/* Fonts bundled with this game (SIL Open Font License, from Google Fonts). Latin subset only. */
+@font-face { font-family: 'DM Serif Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('DMSerifDisplay-400i.woff2') format('woff2'); }
+@font-face { font-family: 'DM Serif Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('DMSerifDisplay-400.woff2') format('woff2'); }
+@font-face { font-family: 'Special Elite'; font-style: normal; font-weight: 400; font-display: swap; src: url('SpecialElite-400.woff2') format('woff2'); }
+@font-face { font-family: 'Courier Prime'; font-style: normal; font-weight: 400; font-display: swap; src: url('CourierPrime-400.woff2') format('woff2'); }
+@font-face { font-family: 'Courier Prime'; font-style: normal; font-weight: 700; font-display: swap; src: url('CourierPrime-700.woff2') format('woff2'); }
+

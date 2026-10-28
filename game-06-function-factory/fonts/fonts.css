@@ -1,0 +1,6 @@
+/* Fonts bundled with this game (SIL Open Font License, from Google Fonts). Latin subset only. */
+@font-face { font-family: 'Saira Stencil One'; font-style: normal; font-weight: 400; font-display: swap; src: url('SairaStencilOne-400.woff2') format('woff2'); }
+@font-face { font-family: 'Saira Condensed'; font-style: normal; font-weight: 500; font-display: swap; src: url('SairaCondensed-500.woff2') format('woff2'); }
+@font-face { font-family: 'Saira Condensed'; font-style: normal; font-weight: 700; font-display: swap; src: url('SairaCondensed-700.woff2') format('woff2'); }
+@font-face { font-family: 'Share Tech Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('ShareTechMono-400.woff2') format('woff2'); }
+

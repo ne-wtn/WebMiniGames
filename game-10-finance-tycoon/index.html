@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finance Tycoon — From Stand to Shop</title>
+  <meta name="description" content="A business simulation about percentages, profit and loss, discounts, simple interest and budgeting.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E💹%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mg-app">
+    <header id="hud"></header>
+    <main class="mg-main biz">
+      <section class="store" aria-label="Your shop">
+        <div class="forecast" id="forecast" aria-live="polite"></div>
+        <canvas id="shop" role="img" aria-label="Your storefront"></canvas>
+        <div class="report" id="report" hidden role="dialog" aria-labelledby="report-title"></div>
+      </section>
+
+      <section class="plan" aria-labelledby="plan-h">
+        <h2 id="plan-h">Plan the day</h2>
+        <div class="block">
+          <h3>📦 Buy stock <small>(bulk: 50+ units −10%, 100+ units −20%)</small></h3>
+          <div id="stock"></div>
+        </div>
+        <div class="block">
+          <h3>🏷 Prices &amp; promotion</h3>
+          <div id="prices"></div>
+          <label class="row">Promotion discount
+            <select id="discount">
+              <option value="0">No discount</option>
+              <option value="10">10% off</option>
+              <option value="20">20% off</option>
+              <option value="30">30% off</option>
+            </select>
+          </label>
+          <label class="row">Marketing spend: <strong id="mktOut">£0</strong>
+            <input type="range" id="marketing" min="0" max="60" step="5" value="0">
+          </label>
+        </div>
+        <div class="block">
+          <h3>🏦 Bank</h3>
+          <div id="bank"></div>
+        </div>
+        <div class="block">
+          <h3>🛠 Upgrades</h3>
+          <div id="upgrades"></div>
+        </div>
+        <button class="mg-btn mg-btn--primary mg-btn--lg end-day" type="button" id="endDayBtn">End Business Day</button>
+      </section>
+
+      <section class="dash" aria-labelledby="dash-h">
+        <h2 id="dash-h">Dashboard</h2>
+        <div class="kpis" id="kpis"></div>
+        <canvas id="chartCash" class="chart" aria-label="Cash and net worth by day"></canvas>
+        <canvas id="chartPL" class="chart" aria-label="Revenue, costs and profit by day"></canvas>
+        <h3>Objectives</h3>
+        <ul class="objectives" id="objectives"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

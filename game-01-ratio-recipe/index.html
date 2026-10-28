@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe Rush — Ratio Kitchen</title>
+  <meta name="description" content="A cooking and resource-management game about ratios, proportion, fractions, percentages and unit conversion.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🍳%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mg-app">
+    <header id="hud"></header>
+    <main class="mg-main kitchen" id="kitchen">
+      <section class="rail" aria-label="Order tickets">
+        <h2 class="rail__title">Orders</h2>
+        <ol class="rail__list" id="rail"></ol>
+      </section>
+
+      <section class="pantry mg-panel" aria-labelledby="pantry-h">
+        <h2 id="pantry-h">🧺 Pantry</h2>
+        <p class="hint">Tap a jar to add it to the bowl.</p>
+        <div class="pantry__grid" id="pantry"></div>
+      </section>
+
+      <section class="station mg-panel" aria-labelledby="station-h">
+        <h2 id="station-h" class="mg-sr-only">Prep station</h2>
+        <div class="recipe" id="recipe"></div>
+        <h3 class="bowl-title" id="bowlTitle">Mixing bowl</h3>
+        <div class="bowl-wrap">
+          <div class="bowl" aria-hidden="true"><div class="bowl__fill" id="bowlFill"></div></div>
+          <div class="bowl__rows" id="bowlRows" aria-label="Mixing bowl contents"></div>
+        </div>
+        <div class="station__actions">
+          <button class="mg-btn" type="button" id="emptyBtn">↺ Empty Bowl</button>
+          <button class="mg-btn mg-btn--primary mg-btn--lg" type="button" id="submitBtn">✔ Submit Order <kbd class="key">S</kbd></button>
+        </div>
+        <div class="result" id="result" aria-live="polite"></div>
+      </section>
+
+      <section class="ovens mg-panel" aria-labelledby="ovens-h">
+        <h2 id="ovens-h">🔥 Ovens</h2>
+        <div id="ovens" class="ovens__list"></div>
+        <p class="hint">Serve dishes before they burn!</p>
+      </section>
+
+      <div class="banner" id="banner" hidden></div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

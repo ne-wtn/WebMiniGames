@@ -1,0 +1,7 @@
+/* Fonts bundled with this game (SIL Open Font License, from Google Fonts). Latin subset only. */
+@font-face { font-family: 'Michroma'; font-style: normal; font-weight: 400; font-display: swap; src: url('Michroma-400.woff2') format('woff2'); }
+@font-face { font-family: 'B612'; font-style: normal; font-weight: 400; font-display: swap; src: url('B612-400.woff2') format('woff2'); }
+@font-face { font-family: 'B612'; font-style: normal; font-weight: 700; font-display: swap; src: url('B612-700.woff2') format('woff2'); }
+@font-face { font-family: 'B612 Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('B612Mono-400.woff2') format('woff2'); }
+@font-face { font-family: 'B612 Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url('B612Mono-700.woff2') format('woff2'); }
+

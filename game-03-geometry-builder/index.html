@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geometry City — Construction Simulator</title>
+  <meta name="description" content="A city-building game about area, perimeter, volume, surface area, Pythagoras and geometric properties.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🏗️%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mg-app">
+    <header id="hud"></header>
+    <main class="mg-main city">
+      <aside class="tools mg-panel" aria-labelledby="tools-h">
+        <h2 id="tools-h">Tools</h2>
+        <div class="tools__grid" id="tools" role="toolbar" aria-label="Construction tools"></div>
+        <div class="decor" id="decorBox">
+          <h3>Decorations</h3>
+          <div class="decor__grid" id="decor"></div>
+        </div>
+      </aside>
+
+      <section class="board" aria-label="Construction plot">
+        <canvas id="plot" aria-label="Construction grid. Drag to build. Each square is 1 metre."></canvas>
+        <div class="tip" id="tip" hidden></div>
+      </section>
+
+      <aside class="side">
+        <section class="brief mg-panel" aria-labelledby="brief-h">
+          <h2 id="brief-h">Project brief</h2>
+          <p class="brief__name" id="briefName"></p>
+          <ul class="reqs" id="reqs"></ul>
+          <div class="budget">
+            <div class="budget__row"><span>Projected cost</span><strong id="cost">$0</strong></div>
+            <div class="budget__bar"><span id="costBar"></span></div>
+          </div>
+        </section>
+        <section class="inspector mg-panel" aria-labelledby="insp-h" aria-live="polite">
+          <h2 id="insp-h">Inspector</h2>
+          <div id="inspector"></div>
+        </section>
+        <button class="mg-btn mg-btn--primary mg-btn--lg approve" type="button" id="approveBtn">🏛 Approve Construction</button>
+      </aside>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

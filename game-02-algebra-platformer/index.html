@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Algebra Adventure — Variable Platformer</title>
+  <meta name="description" content="A 2D platformer where algebraic expressions, equations and inequalities control bridges, doors, lasers and lifts.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🧗%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mg-app">
+    <header id="hud"></header>
+    <main class="mg-main world" id="world">
+      <canvas id="game" aria-label="Platformer world. Use arrow keys to move and jump." role="img"></canvas>
+
+      <div class="chip-bar" aria-live="polite">
+        <span class="chip" id="chargeChip">🔋 Charges: 0</span>
+        <span class="chip" id="coinChip">🪙 0 / 0</span>
+        <span class="chip chip--hint" id="hintChip">Walk to a terminal ⌨ to set variables</span>
+      </div>
+
+      <section class="terminal" id="terminal" hidden aria-labelledby="term-title">
+        <div class="terminal__head">
+          <h2 id="term-title">Terminal</h2>
+          <span class="terminal__keys">Q/E: x · Z/C: y · Enter</span>
+        </div>
+        <div class="terminal__vars" id="termVars"></div>
+        <ul class="terminal__mechs" id="termMechs"></ul>
+        <button class="mg-btn mg-btn--primary" type="button" id="activateBtn">⚡ Activate Mechanism</button>
+      </section>
+
+      <div class="mg-touchpad" id="touchpad">
+        <div class="mg-touchpad__group">
+          <button type="button" id="tLeft" aria-label="Move left">◀</button>
+          <button type="button" id="tRight" aria-label="Move right">▶</button>
+        </div>
+        <div class="mg-touchpad__group">
+          <button type="button" id="tJump" aria-label="Jump">⤒</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

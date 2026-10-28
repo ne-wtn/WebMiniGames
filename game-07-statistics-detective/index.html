@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Detective — The Meridian Diamond Case</title>
+  <meta name="description" content="An investigation game about mean, median, mode, range and interpreting data.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🔍%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mg-app">
+    <header id="hud"></header>
+    <main class="mg-main office">
+      <section class="map paper" aria-labelledby="map-h">
+        <h2 id="map-h">City map</h2>
+        <svg id="map" viewBox="0 0 320 220" role="group" aria-label="City map with investigation locations"></svg>
+        <p class="hint" id="mapHint">Click a place to collect its records. Travel costs time!</p>
+      </section>
+
+      <section class="lab paper" aria-labelledby="lab-h">
+        <div class="lab__head">
+          <h2 id="lab-h">Data lab</h2>
+          <div class="tabs" id="dsTabs" role="tablist" aria-label="Collected datasets"></div>
+        </div>
+        <p class="lab__desc" id="dsDesc"></p>
+        <div class="filters" id="filters"></div>
+        <div class="lab__grid">
+          <div class="table-wrap"><table class="data" id="dataTable"></table></div>
+          <div class="analysis">
+            <label class="field">Analyse column <select id="colSel"></select></label>
+            <dl class="stats" id="stats"></dl>
+            <fieldset class="statpick" id="statPick"><legend>Highlight statistic</legend></fieldset>
+            <div class="chart-tools">
+              <button class="mg-btn mg-btn--sm" type="button" id="chartType">Chart: bars</button>
+            </div>
+            <canvas id="chart" aria-label="Chart of the analysed column"></canvas>
+            <button class="mg-btn mg-btn--primary" type="button" id="pinBtn">📌 Pin finding to case board</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="board cork" aria-labelledby="board-h">
+        <h2 id="board-h">Case board</h2>
+        <p class="board__chapter" id="chapter"></p>
+        <ol class="leads" id="leads"></ol>
+        <h3>Evidence cards</h3>
+        <div class="cards" id="cards"></div>
+        <button class="mg-btn mg-btn--accent mg-btn--lg submit" type="button" id="submitBtn">Submit Case Report</button>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

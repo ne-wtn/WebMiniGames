@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Probability Carnival — Design the Odds</title>
+  <meta name="description" content="A carnival management game about probability, relative frequency and expected value.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🎡%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mg-app">
+    <header id="hud"></header>
+    <main class="mg-main carnival">
+      <nav class="booths" id="booths" role="tablist" aria-label="Attractions"></nav>
+
+      <section class="design mg-panel" aria-labelledby="design-h">
+        <h2 id="design-h">Design</h2>
+        <p class="design__price" id="price"></p>
+        <div id="controls" class="controls"></div>
+        <table class="probs" id="probs" aria-label="Theoretical probabilities"></table>
+        <div class="ev" id="ev" aria-live="polite"></div>
+      </section>
+
+      <section class="booth" aria-label="Attraction">
+        <div class="booth__sign" id="boothSign">Prize Wheel</div>
+        <canvas id="booth" role="img" aria-label="Animated attraction"></canvas>
+        <div class="booth__result" id="boothResult" aria-live="polite"></div>
+        <div class="booth__actions">
+          <button class="mg-btn" type="button" id="testBtn">🧪 Test Run ×10 <small>(−2 🪙)</small></button>
+          <button class="mg-btn mg-btn--primary mg-btn--lg" type="button" id="runBtn">🎪 Run Attraction</button>
+        </div>
+      </section>
+
+      <section class="results mg-panel" aria-labelledby="results-h">
+        <h2 id="results-h">Results</h2>
+        <p class="results__sub" id="freqTitle"></p>
+        <canvas id="freq" class="chart" aria-label="Observed relative frequency compared with theoretical probability"></canvas>
+        <p class="results__sub">Relative frequency of a win as plays build up</p>
+        <canvas id="conv" class="chart chart--small" aria-label="Convergence of relative frequency"></canvas>
+        <h3>Session record</h3>
+        <div class="log-wrap"><table class="log" id="log"></table></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

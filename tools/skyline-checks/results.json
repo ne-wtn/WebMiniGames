@@ -1,0 +1,80 @@
+{
+  "noTyping": true,
+  "mouseDrag": true,
+  "keyboard": true,
+  "layoutResize": true,
+  "wrongBlocksAndBeamsRejected": true,
+  "pause": true,
+  "rounds": [
+    {
+      "floor": 2,
+      "complete": true
+    },
+    {
+      "floor": 3,
+      "complete": true
+    },
+    {
+      "floor": 4,
+      "complete": true
+    },
+    {
+      "floor": 5,
+      "complete": true
+    },
+    {
+      "floor": 6,
+      "complete": true
+    },
+    {
+      "floor": 7,
+      "complete": true
+    },
+    {
+      "floor": 8,
+      "complete": true
+    },
+    {
+      "floor": 9,
+      "complete": true
+    },
+    {
+      "floor": 10,
+      "complete": true
+    }
+  ],
+  "result": {
+    "stars": 2,
+    "decisions": 14,
+    "solved": 14,
+    "independentFirst": 10,
+    "assisted": 1,
+    "attempts": 17,
+    "topics": [
+      {
+        "topic": "Spatial alignment",
+        "decisions": 3,
+        "independentFirst": 2
+      },
+      {
+        "topic": "Fractions & proportions",
+        "decisions": 3,
+        "independentFirst": 2
+      },
+      {
+        "topic": "Construction geometry",
+        "decisions": 8,
+        "independentFirst": 6
+      }
+    ]
+  },
+  "mobile": {
+    "width": 390,
+    "noOverflow": true,
+    "touchDrag": true,
+    "touchSocket": true,
+    "noTyping": true
+  },
+  "restart": true,
+  "runtimeErrors": []
+}

@@ -1,0 +1,7 @@
+/* Fonts bundled with this game (SIL Open Font License, from Google Fonts). Latin subset only. */
+@font-face { font-family: 'Press Start 2P'; font-style: normal; font-weight: 400; font-display: swap; src: url('PressStart2P-400.woff2') format('woff2'); }
+@font-face { font-family: 'Pixelify Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('PixelifySans-400.woff2') format('woff2'); }
+@font-face { font-family: 'Pixelify Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('PixelifySans-600.woff2') format('woff2'); }
+@font-face { font-family: 'Pixelify Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('PixelifySans-700.woff2') format('woff2'); }
+@font-face { font-family: 'VT323'; font-style: normal; font-weight: 400; font-display: swap; src: url('VT323-400.woff2') format('woff2'); }
+

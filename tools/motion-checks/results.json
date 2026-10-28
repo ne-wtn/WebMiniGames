@@ -1,0 +1,101 @@
+{
+  "reports": [
+    {
+      "name": "hub",
+      "filters": true,
+      "layoutAnimation": true
+    },
+    {
+      "name": "game-01-ratio-recipe",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    },
+    {
+      "name": "game-02-algebra-platformer",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    },
+    {
+      "name": "game-03-geometry-builder",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    },
+    {
+      "name": "game-04-coordinate-racer",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    },
+    {
+      "name": "game-05-probability-arcade",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    },
+    {
+      "name": "game-06-function-factory",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    },
+    {
+      "name": "game-07-statistics-detective",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    },
+    {
+      "name": "game-08-trigonometry-rescue",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    },
+    {
+      "name": "game-09-integer-maze",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    },
+    {
+      "name": "game-10-finance-tycoon",
+      "menu": true,
+      "scoreReaction": true,
+      "pause": true,
+      "endCount": true,
+      "restart": true,
+      "mobile": true
+    }
+  ],
+  "runtimeErrors": [],
+  "reducedMotion": true
+}

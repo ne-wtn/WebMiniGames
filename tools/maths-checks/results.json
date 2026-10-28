@@ -1,0 +1,68 @@
+{
+  "reports": [
+    {
+      "game": "game-01-ratio-recipe",
+      "incorrectThenCorrect": true,
+      "separateMathsRecord": true
+    },
+    {
+      "game": "game-02-algebra-platformer",
+      "mathsGate": true,
+      "freshRounds": 10,
+      "displayedEquationMatchesLift": true
+    },
+    {
+      "game": "game-03-geometry-builder",
+      "calculatedBlueprints": 10,
+      "wrongAnswersBlocked": true
+    },
+    {
+      "game": "game-05-probability-arcade",
+      "mandatoryAttractions": true,
+      "forecasts": 10,
+      "randomResultsSeparated": true
+    },
+    {
+      "game": "game-06-function-factory",
+      "contracts": 10,
+      "compositionVerified": true
+    },
+    {
+      "game": "game-07-statistics-detective",
+      "cases": 10,
+      "calculatedEvidence": 60,
+      "interpretationRequired": true
+    },
+    {
+      "game": "game-08-trigonometry-rescue",
+      "calculatedMissions": 10,
+      "liveAimingRemoved": true,
+      "windAndCables": true
+    },
+    {
+      "game": "game-09-integer-maze",
+      "verifiedConsoles": 10,
+      "answersHiddenUntilCommit": true
+    },
+    {
+      "game": "game-10-finance-tycoon",
+      "days": 10,
+      "checkedInvoices": true,
+      "mandatoryDailyQuotes": true
+    }
+  ],
+  "mobile": {
+    "attempts": 0,
+    "overflow": false,
+    "form": true
+  },
+  "edgeCases": {
+    "invalidFractions": true,
+    "pencePrecision": true,
+    "stalePlans": true,
+    "guidance": true,
+    "persistence": true,
+    "restart": true
+  },
+  "errors": []
+}

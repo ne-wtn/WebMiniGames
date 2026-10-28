@@ -1,0 +1,163 @@
+{
+  "reports": [
+    {
+      "file": "index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-01-ratio-recipe/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-02-algebra-platformer/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-03-geometry-builder/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-04-coordinate-racer/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-05-probability-arcade/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-06-function-factory/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-07-statistics-detective/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-08-trigonometry-rescue/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-09-integer-maze/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-10-finance-tycoon/index.html",
+      "width": 1280,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-01-ratio-recipe/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-02-algebra-platformer/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-03-geometry-builder/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-04-coordinate-racer/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-05-probability-arcade/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-06-function-factory/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-07-statistics-detective/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-08-trigonometry-rescue/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-09-integer-maze/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    },
+    {
+      "file": "game-10-finance-tycoon/index.html",
+      "width": 390,
+      "firstOpacity": 0,
+      "fontsReady": true,
+      "layoutShift": 0
+    }
+  ],
+  "cpuSlowdown": 4,
+  "lateScriptFallback": true,
+  "slowFontFallback": true,
+  "missingScriptFallback": true,
+  "runtimeErrors": []
+}

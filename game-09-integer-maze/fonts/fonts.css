@@ -1,0 +1,6 @@
+/* Fonts bundled with this game (SIL Open Font License, from Google Fonts). Latin subset only. */
+@font-face { font-family: 'Monoton'; font-style: normal; font-weight: 400; font-display: swap; src: url('Monoton-400.woff2') format('woff2'); }
+@font-face { font-family: 'Audiowide'; font-style: normal; font-weight: 400; font-display: swap; src: url('Audiowide-400.woff2') format('woff2'); }
+@font-face { font-family: 'Oxanium'; font-style: normal; font-weight: 500; font-display: swap; src: url('Oxanium-500.woff2') format('woff2'); }
+@font-face { font-family: 'Oxanium'; font-style: normal; font-weight: 700; font-display: swap; src: url('Oxanium-700.woff2') format('woff2'); }
+

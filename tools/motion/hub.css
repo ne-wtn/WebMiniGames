@@ -1,0 +1,23 @@
+/* A soft spotlight, depth on hover, and elastic reflow; no card rotation. */
+.card { animation:none; }
+.card__link, .t07 .card__link { transform:none; transition:translate 520ms var(--am-ease), box-shadow 520ms var(--am-ease), filter 350ms ease; }
+.card__link:hover, .t07 .card__link:hover { transform:none; }
+.card__art { isolation:isolate; }
+.card__svg { transform-origin:50% 55%; transition:scale 850ms var(--am-ease); }
+.card__art::after { content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 25%,rgba(255,255,255,.18) 50%,transparent 75%);translate:-110% 0;transition:translate 750ms var(--am-ease); }
+.play { transition:translate 450ms var(--am-ease),filter 250ms ease; }
+.chip { transition:background-color 240ms ease,border-color 240ms ease,color 240ms ease,translate 400ms var(--am-ease); }
+.chip:active { translate:0 1px; }
+.marquee { isolation:isolate; }
+.marquee::after { content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 18% 15%,#ff2fd622,transparent 55%),radial-gradient(ellipse at 85% 85%,#f6b42c16,transparent 50%);background-size:145% 145%;animation:am-marquee-light 12s ease-in-out infinite alternate; }
+.marquee::before { animation:am-bulb-breathe 4.5s ease-in-out infinite; }
+@media (hover:hover) and (pointer:fine) {
+ .card__link:hover, .t07 .card__link:hover { translate:0 -6px;filter:drop-shadow(0 12px 12px rgba(0,0,0,.2)); }
+ .card__link:hover .card__svg, .card__link:focus-visible .card__svg { scale:1.045; }
+ .card__link:hover .card__art::after { translate:110% 0; }
+ .card__link:hover .play { translate:3px 0; }
+ .chip:hover { translate:0 -2px; }
+}
+.card__link:focus-visible { translate:0 -4px; }
+@keyframes am-marquee-light { from { opacity:.55; } to { opacity:1; } }
+@keyframes am-bulb-breathe { 50% { opacity:.65; } }

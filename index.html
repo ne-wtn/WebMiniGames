@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maths Arcade — 10 Secondary Maths Games</title>
+  <meta name="description" content="Ten playable browser games that teach secondary-school mathematics through gameplay, not quizzes.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🎮%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <!-- Each card is drawn in its own game's typefaces -->
+  <link rel="stylesheet" href="game-01-ratio-recipe/fonts/fonts.css">
+  <link rel="stylesheet" href="game-02-algebra-platformer/fonts/fonts.css">
+  <link rel="stylesheet" href="game-03-geometry-builder/fonts/fonts.css">
+  <link rel="stylesheet" href="game-04-coordinate-racer/fonts/fonts.css">
+  <link rel="stylesheet" href="game-05-probability-arcade/fonts/fonts.css">
+  <link rel="stylesheet" href="game-06-function-factory/fonts/fonts.css">
+  <link rel="stylesheet" href="game-07-statistics-detective/fonts/fonts.css">
+  <link rel="stylesheet" href="game-08-trigonometry-rescue/fonts/fonts.css">
+  <link rel="stylesheet" href="game-09-integer-maze/fonts/fonts.css">
+  <link rel="stylesheet" href="game-10-finance-tycoon/fonts/fonts.css">
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="marquee">
+      <p class="hero__kicker">Secondary Maths Collection</p>
+      <h1>Maths <span>Arcade</span></h1>
+      <p class="hero__lead">Ten games. Cook, race, build, investigate, fly and trade. The maths <em>is</em> the game.</p>
+    </div>
+    <div class="hero__stats" id="summary" aria-live="polite"></div>
+  </header>
+
+  <main class="wrap">
+    <div class="filters" role="group" aria-label="Filter games by topic">
+      <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All games</button>
+      <button type="button" class="chip" data-filter="number" aria-pressed="false">Number</button>
+      <button type="button" class="chip" data-filter="algebra" aria-pressed="false">Algebra</button>
+      <button type="button" class="chip" data-filter="geometry" aria-pressed="false">Geometry</button>
+      <button type="button" class="chip" data-filter="data" aria-pressed="false">Probability &amp; stats</button>
+    </div>
+    <ul class="grid" id="grid" aria-label="Games"></ul>
+  </main>
+
+  <footer class="foot">
+    <p>Works offline in any modern browser. Sound is off until you turn it on in a game. Best scores are saved on this device only.</p>
+  </footer>
+  <script src="hub.js"></script>
+</body>
+</html>

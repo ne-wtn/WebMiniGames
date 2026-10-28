@@ -1,0 +1,5 @@
+/* Hub font (SIL Open Font License, from Google Fonts). Latin subset only. */
+@font-face { font-family: 'Bungee'; font-style: normal; font-weight: 400; font-display: swap; src: url('Bungee-400.woff2') format('woff2'); }
+
+/* Primary UI font, bundled for offline play. See Inter-LICENSE.txt. */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('Inter-Variable.woff2') format('woff2'); }

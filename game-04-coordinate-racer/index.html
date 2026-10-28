@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Skyline Stack — Build a Tower with Maths</title>
+  <meta name="description" content="Help Pip build a happy ten-floor tower! Pick colourful blocks, drag the crane, and connect beams in a hands-on maths playground. No typing needed.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8F%97%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mg-app">
+    <header id="hud"></header>
+    <main class="mg-main skyline">
+      <section class="construction-site" aria-label="Play with your tower">
+        <canvas id="site" tabindex="0" role="img" aria-label="Drag your hanging block sideways and release to drop. Arrow keys and the move buttons also work. For beams, drag from A to a roof socket."></canvas>
+        <div class="site-heading"><div><span class="eyebrow">LOOK WHAT YOU’RE BUILDING!</span><strong id="towerHeight">0 m</strong></div><button class="view-btn" id="overviewBtn" type="button" aria-pressed="false">↗ See it all</button></div>
+        <div class="site-bottom"><span class="site-live" id="siteStatus" role="status">Pick • drag • drop</span><div class="floor-dots" id="floorDots" aria-label="Tower progress"></div></div>
+      </section>
+      <aside class="blueprint-panel" aria-label="Pip’s building playground">
+        <div class="buddy-row"><span class="pip" aria-hidden="true"><i></i><i></i><b></b></span><div><p class="eyebrow" id="floorKicker">Floor 1 of 10</p><h1 id="floorTitle">Hello, builder!</h1></div></div>
+        <p class="blueprint-brief" id="brief"></p><div class="support-facts" id="supportFacts"></div>
+        <h2 id="trayTitle">Pick your block</h2><div class="piece-tray" id="pieceTray" role="group" aria-label="Building pieces"></div>
+        <div class="crane-controls" id="craneControls"><button class="move-btn" id="moveLeft" type="button" aria-label="Move block left one metre">←</button><output id="cranePosition" aria-live="polite">x = 0 m</output><button class="move-btn" id="moveRight" type="button" aria-label="Move block right one metre">→</button></div>
+        <div class="socket-choices" id="socketChoices" role="group" aria-label="Roof sockets" hidden></div>
+        <button class="mg-btn mg-btn--primary build-button" id="buildBtn" type="button" disabled>Drop block ↓</button><button class="mg-btn mg-btn--primary build-button" id="nextBtn" type="button" hidden>Next floor! ↑</button>
+        <p class="build-feedback" id="buildFeedback" role="status" aria-live="polite"></p>
+        <button class="guidance-btn" id="guidanceBtn" type="button">💡 A little help, Pip?</button><p class="guidance-text" id="guidanceText" hidden></p>
+        <div class="facade"><span>Pick a colour!</span><div id="facadeOptions" role="group" aria-label="Block colour"><button type="button" class="swatch" style="--swatch:#58cfa9" data-color="#58cfa9" aria-label="Mint block" aria-pressed="true"></button><button type="button" class="swatch" style="--swatch:#ffbe64" data-color="#ffbe64" aria-label="Peach block" aria-pressed="false"></button><button type="button" class="swatch" style="--swatch:#ae9bfa" data-color="#ae9bfa" aria-label="Lilac block" aria-pressed="false"></button></div></div>
+      </aside>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

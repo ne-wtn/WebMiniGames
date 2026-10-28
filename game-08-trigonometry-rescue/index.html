@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ARCADE BOOT (start) -->
+  <style>html.am-booting body { visibility: hidden; }</style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('am-booting');
+      window.__arcadeBoot = { expired: false, timer: setTimeout(() => {
+        window.__arcadeBoot.expired = true;
+        root.classList.remove('am-booting');
+      }, 1800) };
+    })();
+  </script>
+  <!-- ARCADE BOOT (end) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trigonometry Rescue — Mountain Drone Missions</title>
+  <meta name="description" content="A drone navigation puzzle about right-angled trigonometry, angles of elevation, bearings and distance.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🚁%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mg-app">
+    <header id="hud"></header>
+    <main class="mg-main ops">
+      <section class="view" aria-label="Mission view">
+        <canvas id="scene" role="img" aria-label="Mountain rescue scene"></canvas>
+        <div class="brief" id="brief"></div>
+      </section>
+
+      <aside class="console" aria-label="Drone control console">
+        <section class="pane">
+          <h2>Flight leg</h2>
+          <div class="ctl">
+            <label for="angle" id="angleLabel">Angle of elevation θ</label>
+            <div class="ctl__row">
+              <button class="mg-btn" type="button" data-adj="angle:-5" aria-label="Decrease angle by 5">−5</button>
+              <button class="mg-btn" type="button" data-adj="angle:-1" aria-label="Decrease angle by 1">−1</button>
+              <output id="angleOut">0°</output>
+              <button class="mg-btn" type="button" data-adj="angle:1" aria-label="Increase angle by 1">+1</button>
+              <button class="mg-btn" type="button" data-adj="angle:5" aria-label="Increase angle by 5">+5</button>
+            </div>
+            <input type="number" inputmode="decimal" id="angle" min="-90" max="90" step="0.1" value="30">
+          </div>
+          <div class="ctl">
+            <label for="dist">Distance d (m)</label>
+            <div class="ctl__row">
+              <button class="mg-btn" type="button" data-adj="dist:-10" aria-label="Decrease distance by 10">−10</button>
+              <button class="mg-btn" type="button" data-adj="dist:-1" aria-label="Decrease distance by 1">−1</button>
+              <output id="distOut">50 m</output>
+              <button class="mg-btn" type="button" data-adj="dist:1" aria-label="Increase distance by 1">+1</button>
+              <button class="mg-btn" type="button" data-adj="dist:10" aria-label="Increase distance by 10">+10</button>
+            </div>
+            <input type="number" inputmode="decimal" id="dist" min="1" max="300" step="0.1" value="50">
+          </div>
+          <div class="ctl__row ctl__row--wrap">
+            <button class="mg-btn" type="button" id="dirBtn">Facing: Right ▶</button>
+            <button class="mg-btn" type="button" id="landBtn">⬇ Set landing</button>
+          </div>
+          <div class="readout" id="legInfo" aria-live="polite"></div>
+          <button class="mg-btn mg-btn--primary mg-btn--lg wide" type="button" id="launchBtn">🚁 Launch Rescue</button>
+        </section>
+
+        <section class="pane" id="winchPane">
+          <h2>Winch cable</h2>
+          <div class="ctl">
+            <label for="cable">Cable length L (m): <output id="cableOut">20</output></label>
+            <input type="number" inputmode="decimal" id="cable" min="1" max="150" step="0.1" value="20">
+          </div>
+          <div class="ctl">
+            <label for="cangle">Cable angle from vertical φ: <output id="cangleOut">0°</output></label>
+            <input type="number" inputmode="decimal" id="cangle" min="-60" max="60" step="0.1" value="0">
+          </div>
+          <button class="mg-btn mg-btn--accent wide" type="button" id="winchBtn">🪝 Lower Cable</button>
+        </section>
+
+        <section class="pane">
+          <h2>Sensors</h2>
+          <div class="readout" id="sensors"></div>
+          <button class="mg-btn mg-btn--ghost wide" type="button" id="abortBtn">⚠ Abort &amp; retry mission (−1 drone)</button>
+        </section>
+      </aside>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

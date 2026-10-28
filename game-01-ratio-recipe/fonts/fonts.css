@@ -1,0 +1,8 @@
+/* Fonts bundled with this game (SIL Open Font License, from Google Fonts). Latin subset only. */
+@font-face { font-family: 'Shrikhand'; font-style: normal; font-weight: 400; font-display: swap; src: url('Shrikhand-400.woff2') format('woff2'); }
+@font-face { font-family: 'Caveat'; font-style: normal; font-weight: 600; font-display: swap; src: url('Caveat-600.woff2') format('woff2'); }
+@font-face { font-family: 'Caveat'; font-style: normal; font-weight: 700; font-display: swap; src: url('Caveat-700.woff2') format('woff2'); }
+@font-face { font-family: 'Baloo 2'; font-style: normal; font-weight: 500; font-display: swap; src: url('Baloo2-500.woff2') format('woff2'); }
+@font-face { font-family: 'Baloo 2'; font-style: normal; font-weight: 700; font-display: swap; src: url('Baloo2-700.woff2') format('woff2'); }
+@font-face { font-family: 'Baloo 2'; font-style: normal; font-weight: 800; font-display: swap; src: url('Baloo2-800.woff2') format('woff2'); }
+
